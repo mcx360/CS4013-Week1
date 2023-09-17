@@ -3,9 +3,9 @@ public class Exercise3_17{
     public static void main(String[] args){
         Scanner gameScanner = new Scanner(System.in);
         System.out.println("scissor (0), rock(1), paper(2): ");
-        int PlayergameScenario = gameScanner.nextInt();
+        int playergameScenario = gameScanner.nextInt();
         String player="";
-        switch(PlayergameScenario){
+        switch(playergameScenario){
         case 0:
             player = "scissors";
             break;

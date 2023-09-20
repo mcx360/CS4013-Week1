@@ -42,6 +42,8 @@ public class Exercise3_21 {
             day="Friday";
             break;
         }
+        
         System.out.println("Day of the week is " +day);
     }
+   
 }

@@ -1,14 +1,22 @@
+import java.util.Scanner;
 public class Exercise4_25 {
 
     public static int seriesSum(int num){
-        int sum =0;
-        for(int i=num;i>0;i--){
-            sum += i;
+        int sumNums = 0;
+        if(num>0){
+            for(int i=num;i>0;i--){
+                sumNums+=i;
+            }
+            return sumNums+seriesSum(num-1);
         }
-        num--;
-        seriesSum(num);
-    }
+        else{
+            return sumNums;
+        }
+}
     public static void main(String[] args) {
-        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter nth term of the sequence:");
+        int nthTerm = scanner.nextInt();
+        System.out.println("The sum of this sequence is: "+seriesSum(nthTerm));
     }
 }

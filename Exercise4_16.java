@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Exercise4_16{
     public static boolean isPrime(int num){
@@ -23,19 +25,21 @@ public class Exercise4_16{
         return true;
     }
     
-    public static int[] primeFactors(int num){
-        int[] primeFactors = new int[10];
+    public static ArrayList<Integer> primeFactors(int num){
+        ArrayList<Integer> primeFactors = new ArrayList<Integer>();
         int pos=0;
         for(int i=1;i<num/2;i++){
             if(num%i==0 & isPrime(i)==true){
-                primeFactors[pos] = i;
+                primeFactors.add(i);
                 pos++;
             }
         }
         return primeFactors;
     }
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(primeFactors(60)));
-        //System.out.println(isPrime(13));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number: ");
+        int number = scanner.nextInt();
+        System.out.println("The prime factors of the number are: "+primeFactors(number));
     }
 }

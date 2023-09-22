@@ -19,6 +19,7 @@ public class Exercise7_1 {
         String lineTwo = scanner.nextLine();
         String lineThree = scanner.nextLine();
         System.out.println("");
+        scanner.close();
 
         try{
         String[] partOne = lineOne.split(" ");

@@ -27,11 +27,9 @@ public class Exercise4_16{
     
     public static ArrayList<Integer> primeFactors(int num){
         ArrayList<Integer> primeFactors = new ArrayList<Integer>();
-        int pos=0;
         for(int i=1;i<num/2;i++){
             if(num%i==0 & isPrime(i)==true){
                 primeFactors.add(i);
-                pos++;
             }
         }
         return primeFactors;
@@ -41,6 +39,7 @@ public class Exercise4_16{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");
         int number = scanner.nextInt();
+        scanner.close();
         System.out.println("The prime factors of the number are: "+primeFactors(number));
         }catch(InputMismatchException e){
             System.out.println("Invalid input, try again.");

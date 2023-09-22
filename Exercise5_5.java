@@ -15,5 +15,7 @@ public class Exercise5_5 {
         //test program
         displayLargestNumber(10.359, 20, -66.87);
         displayLargestNumber(0, -83, 10.3);
+        displayLargestNumber(15555, 0, Math.PI);
+        displayLargestNumber(77, -8, 18.9);
     }
 }

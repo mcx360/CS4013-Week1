@@ -19,7 +19,8 @@ public class Exercise7_1 {
         String lineTwo = scanner.nextLine();
         String lineThree = scanner.nextLine();
         System.out.println("");
-        
+
+        try{
         String[] partOne = lineOne.split(" ");
         String[] partTwo = lineTwo.split(" ");
         String[] partThree = lineThree.split(" ");
@@ -43,10 +44,17 @@ public class Exercise7_1 {
         for (int i = 0; i < matrix.length; i++) {
             System.out.println(Arrays.toString(matrix[i]));
         }
+        System.out.println("");
         System.out.println("Sum of the elements at column 0 is "+ sumColumn(matrix, 0));
         System.out.println("Sum of the elements at column 1 is "+ sumColumn(matrix, 1));
         System.out.println("Sum of the elements at column 2 is "+ sumColumn(matrix, 2));
         System.out.println("Sum of the elements at column 3 is "+ sumColumn(matrix, 3));
-        
+    }
+    catch(NumberFormatException e){
+        System.out.println("Invalid input, please try again.");
+    }
+    catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Invalid input, please try again.");
+    }
     }
 }

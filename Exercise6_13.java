@@ -19,6 +19,8 @@ public class Exercise6_13 {
         the numbers passed in the parameter which in this case are multiples
         of 5 
         */
+
+        //test case
         int[] nums={5,10,15,20,25,30,35,40,45,50};
         System.out.println(getRandom(nums));
     }

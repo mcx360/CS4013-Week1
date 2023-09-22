@@ -1,7 +1,8 @@
-import java.time.Year;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Exercise3_21 {
     public static void main(String[] args) {
+        try{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter year: (e.g., 2012): ");
         int year = scanner.nextInt();
@@ -45,5 +46,9 @@ public class Exercise3_21 {
         
         System.out.println("Day of the week is " +day);
     }
-   
+    catch(InputMismatchException e){
+        System.out.println("Invalid input, try again.");
+    }
+
+    }  
 }

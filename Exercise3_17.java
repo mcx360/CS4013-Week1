@@ -1,6 +1,9 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Exercise3_17{
     public static void main(String[] args){
+
+        try{
         Scanner gameScanner = new Scanner(System.in);
         System.out.println("scissor (0), rock(1), paper(2): ");
         int playergameScenario = gameScanner.nextInt();
@@ -52,6 +55,10 @@ public class Exercise3_17{
         }
 
         System.out.println("The computer is "+computer+". You are "+player+". "+result);
-        
+        }
+    catch(InputMismatchException e){
+        System.out.println("Invalid Input, Try again.");
     }
+        
+}
 }

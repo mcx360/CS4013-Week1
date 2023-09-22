@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exercise4_16{
@@ -37,9 +37,13 @@ public class Exercise4_16{
         return primeFactors;
     }
     public static void main(String[] args) {
+        try{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number: ");
         int number = scanner.nextInt();
         System.out.println("The prime factors of the number are: "+primeFactors(number));
+        }catch(InputMismatchException e){
+            System.out.println("Invalid input, try again.");
+        }
     }
 }

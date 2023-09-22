@@ -1,9 +1,11 @@
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Exercise2_25{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        try{
         System.out.println("Enter employees's name: " );
         String employeeName = scanner.nextLine();
         System.out.println("Enter number of hours worked in a week: ");
@@ -29,7 +31,10 @@ public class Exercise2_25{
         System.out.println("\tState withholding ("+stateWithholdingRate+"): "+stateWithholding);
         System.out.println("\tTotal Deduction: "+deductions);
         System.out.println("Net Pay: "+(grossPay-deductions));
-        
+        }
+        catch(InputMismatchException e){
+            System.out.println("Invalid input, try again.");
+        }
         
 
 

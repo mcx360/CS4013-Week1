@@ -18,7 +18,7 @@ public class Exercise7_1 {
         String lineOne = scanner.nextLine();
         String lineTwo = scanner.nextLine();
         String lineThree = scanner.nextLine();
-        System.out.println("ok");
+        System.out.println("");
         
         String[] partOne = lineOne.split(" ");
         String[] partTwo = lineTwo.split(" ");
